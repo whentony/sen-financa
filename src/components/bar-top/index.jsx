@@ -5,7 +5,7 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 ;
 const Bartop = () => {
     return (
-        <div className={styles.containerBartop}>whentony.ferreira@gmail.com
+        <div className={styles.containerBartop}>
             <a className={styles.linkedin} href='https://www.linkedin.com/in/whentony-ferreira-87738b123/'>
                 <FontAwesomeIcon icon={faLinkedin} />
             </a>

@@ -14,59 +14,61 @@ const BarUtil = () => {
         let aux = 0
         if (data.length > 0) {
             for (let i = 0; i < data.length; i++) {
-                console.log(data[i].type)
                 if (data[i].type == 'e') {
                     aux = aux + parseFloat(data[i].value)
                 } else {
                     aux = aux - parseFloat(data[i].value)
                 }
             }
-            console.log(Number(aux))
             setTotal(aux)
         }
     }, [data]);
 
-    const handleInsert = () => {
+    const handleInsert = (e) => {
+        e.preventDefault()
         setData(data => [...data, { description: description, type: type, category: category, value: value }])
     }
 
     return (
-        <div className={styles.containerBarUtil}>
+        <form onSubmit={(e) => handleInsert(e)}>
+            <div className={styles.containerBarUtil}>
 
-            <div className={styles.boxOutros}>
-                <span className={styles.title}> Descrição </span>
-                <input type='text' onChange={(e) => setDescription(e.target.value)} />
-            </div>
-            <div className={styles.boxOutros}>
-                <span className={styles.title}> Tipo </span>
-                <select onChange={(e) => setType(e.target.value)}>
-                    <option value='e'>Entrada</option>
-                    <option value='s'>Saida</option>
-                </select>
-            </div>
-            <div className={styles.boxOutros}>
-                <span className={styles.title}> Categoria </span>
-                <select onChange={(e) => setCategory(e.target.value)}>
-                    <option value='Alimentação'>Alimentação</option>
-                    <option value='Lazer'>Lazer</option>
-                    <option value='Transporte'>Transporte</option>
-                    <option value='Família'>Família</option>
-                    <option value='Trabalho'>Trabalho</option>
-                    <option value='Outros'>Outros</option>
+                <div className={styles.boxOutros}>
+                    <span className={styles.title}> Descrição </span>
+                    <input type='text' onChange={(e) => setDescription(e.target.value)} required />
+                </div>
+                <div className={styles.boxOutros}>
+                    <span className={styles.title}> Tipo </span>
+                    <select onChange={(e) => setType(e.target.value)}>
+                        <option value='e'>Entrada</option>
+                        <option value='s'>Saida</option>
+                    </select>
+                </div>
+                <div className={styles.boxOutros}>
+                    <span className={styles.title}> Categoria </span>
+                    <select onChange={(e) => setCategory(e.target.value)}>
+                        <option value='Alimentação'>Alimentação</option>
+                        <option value='Lazer'>Lazer</option>
+                        <option value='Transporte'>Transporte</option>
+                        <option value='Família'>Família</option>
+                        <option value='Trabalho'>Trabalho</option>
+                        <option value='Outros'>Outros</option>
 
-                </select>
+                    </select>
+                </div>
+                <div className={styles.boxOutros}>
+                    <span className={styles.title}> Valor </span>
+                    <input type='number' onChange={(e) => setValue(e.target.value)} placeholder='00,00' required />
+                </div>
+                <div className={styles.boxOutros}>
+                    <button type='submit'>Enviar</button>
+                </div>
+
+                <div className={styles.boxSaldo}>
+                    <span className={styles.title}>Saldo</span> {total.toFixed(2)}
+                </div>
             </div>
-            <div className={styles.boxOutros}>
-                <span className={styles.title}> Valor </span>
-                <input type='number' onChange={(e) => setValue(e.target.value)} />
-            </div>
-            <div className={styles.boxOutros}>
-                <button onClick={() => handleInsert()}>Enviar</button>
-            </div>
-            <div className={styles.boxSaldo}>
-                <span className={styles.title}>Saldo</span> {total.toFixed(2)}
-            </div>
-        </div>
+        </form>
     )
 }
 

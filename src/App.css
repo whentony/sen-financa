@@ -62,9 +62,13 @@
 input, select {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    padding-left: 1rem rem;
+    padding-left: 1rem;
     font-size: 1.25rem;
     border-radius: 8px;
+}
+
+input {
+    padding: 0.5rem;
 }
 
 button {
@@ -90,4 +94,12 @@ button {
 
 th{
     padding: 20px;
+}
+
+.entrada{
+    background-color: #6DB4F3;
+}
+
+.saida{
+    background-color: #F56666;
 }

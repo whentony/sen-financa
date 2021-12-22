@@ -9,19 +9,14 @@ import { TableContext, TableProvider } from './common/context';
 
 function App() {
   return (
-    <div>
-
-      
+    <>
       <TableProvider>
         <Bartop />
         <BarUtil />
         <Table></Table>
       </TableProvider>
-     
-      
-      
       <Copyright />
-    </div>
+    </>
   );
 }
 
