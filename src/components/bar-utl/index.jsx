@@ -5,6 +5,7 @@ const BarUtil = () => {
     const [description, setDescription] = useState();
     const [type, setType] = useState();
     const [value, setValue] = useState();
+    const [category, setCategory] = useState();
     
     return(
         <div className={styles.containerBarUtil}>
@@ -17,6 +18,13 @@ const BarUtil = () => {
             </div>
             <div>
                 Tipo: 
+                <select>
+                    <option value='e'>Entrada</option>
+                    <option value='s'>Saida</option>
+                </select>
+            </div>
+            <div>
+                Categoria: 
                 <select>
                     <option value='e'>Entrada</option>
                     <option value='s'>Saida</option>
