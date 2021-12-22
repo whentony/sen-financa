@@ -1,7 +1,21 @@
 .containerBarUtil{
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+   
     background-color: #4F618F;
     color:#fff;
+}
+.boxOutros{
+    padding: 10px;
+}
+.boxSaldo {
+    background-color: #162856;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    font-weight: 900;
 }

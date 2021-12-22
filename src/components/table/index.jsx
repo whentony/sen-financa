@@ -17,18 +17,18 @@ const Table = () => {
             <table className={styles.table}>
                 <thead>
                     <tr className={styles.tr}>
-                        <th>Descricao</th>
+                        <th>Descrição</th>
                         <th>Tipo</th>
                         <th>Categoria</th>
                         <th>Valor</th>
-                        <th>Acoes</th>
+                        <th>Ações</th>
                     </tr>
                 </thead>
                     <tbody>
                     {data.map((value, key) => (
                         <tr key={key}>
                             <td>{value.description}</td>
-                            <td>{value.type}</td>
+                            <td>{value.type == 'e' ? 'Entrada' : 'Saída'}</td>
                             <td>{value.category}</td>
                             <td>{value.value}</td>
                             <td><FontAwesomeIcon icon={faEdit} /> <FontAwesomeIcon icon={faTrash} /></td>
