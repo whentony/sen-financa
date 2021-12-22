@@ -1,22 +1,24 @@
-.containerTable{
+.containerTable {
     display: flex;
     justify-content: space-between;
     padding: 30px;
 }
 
-.table{
+.table {
     width: 100%;
 }
 
 
-.tr{
+.tr {
     background-color: #4F618F;
     color: #fff;
 }
 
 tr:nth-child(even) {
     background-color: #7887AB;
-  }
-  td{
-      padding: 5px;
-  }
+}
+
+td {
+    padding: 5px;
+    text-align: center;
+}
