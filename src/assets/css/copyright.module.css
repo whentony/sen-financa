@@ -1,8 +1,9 @@
 .containerCopyright {
     background-color: #061539;
-    width: 100%;
     text-align: center;
     padding: 10px;
+    border-start-start-radius: 10px;
+    border-start-end-radius: 10px;
 }
 
 .containerCopyright > a {
