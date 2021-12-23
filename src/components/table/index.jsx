@@ -114,7 +114,7 @@ const Table = () => {
                 </div>
                 <div className='boxOutros'>
                     <span className={styles.title}> Valor </span>
-                    <input type='text' value={value} onChange={(e) => setValue(e.target.value)} placeholder='00,00' required />
+                    <input type='number' value={value} onChange={(e) => setValue(e.target.value)} placeholder='00,00' required />
                 </div>
                 <div className='boxOutros'>
                     <button type='submit'>Enviar</button>
