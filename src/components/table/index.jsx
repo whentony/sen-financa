@@ -7,6 +7,10 @@ import { TableContext } from '../../common/context';
 const Table = () => {
     const { data, setData } = useContext(TableContext);
 
+    useEffect(() => {
+        //set data in localstorage
+        localStorage.setItem("data", JSON.stringify(data));
+    }, [data])
 
     const handleRemove = (key, value) => {
         let d = data.filter(function(item) {

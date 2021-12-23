@@ -7,9 +7,10 @@
 }
 .boxOutros{
     padding: 10px;
+    text-align: center;
 }
 .boxSaldo {
-    background-color: #162856;
+  
     padding: 10px;
     display: flex;
     align-items: center;
@@ -18,4 +19,12 @@
 
 .title{
     font-weight: 900;
+}
+
+@media (max-width: 1000px)  {
+    .containerBarUtil{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+ }
 }

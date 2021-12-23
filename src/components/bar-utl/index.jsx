@@ -10,7 +10,13 @@ const BarUtil = () => {
     const [total, setTotal] = useState(0);
     const { data, setData } = useContext(TableContext);
 
+    useEffect(() => {   
+        //Get data in localstorage
+       setData(JSON.parse(localStorage.getItem("data")))
+    }, [])
+
     useEffect(() => {
+        
         let aux = 0
         if (data.length > 0) {
             for (let i = 0; i < data.length; i++) {
@@ -64,8 +70,8 @@ const BarUtil = () => {
                     <button type='submit'>Enviar</button>
                 </div>
 
-                <div className={styles.boxSaldo}>
-                    <span className={styles.title}>Saldo</span> {total.toFixed(2)}
+                <div className={total >= 0 ? 'entrada' + ' ' + styles.boxSaldo : 'saida' + ' ' + styles.boxSaldo}>
+                    <span className={styles.title}>Saldo</span> R$ {total.toFixed(2)}
                 </div>
             </div>
         </form>

@@ -20,3 +20,25 @@ td {
     padding: 5px;
     text-align: center;
 }
+
+@media (max-width: 550px) {
+    .containerTable {
+
+        padding: 0px;
+    }
+
+    .table thead {
+        display: none;
+      }
+      .table tr {
+        border-bottom: 1px solid #dddddd;
+      }
+      .table td {
+        border: 0;
+      }
+      .table td:not(:first-child) {
+        display: block;
+      }
+
+   
+}
