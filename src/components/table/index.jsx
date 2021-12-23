@@ -52,6 +52,7 @@ const Table = () => {
         localStorage.setItem("data", JSON.stringify(data));
     }, [data])
 
+    
     //Método de Edição do item da tabela
     const handleEdit = (e) => {
         e.preventDefault()
@@ -67,7 +68,7 @@ const Table = () => {
     }
 
     //Método de Remoção do item da tabela
-    const handleRemove = (key, value) => {
+    const handleRemove = ( value) => {
         let d = data.filter(function (item) {
             return item !== value
         });

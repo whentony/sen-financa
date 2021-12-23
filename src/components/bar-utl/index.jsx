@@ -12,7 +12,13 @@ const BarUtil = () => {
 
     useEffect(() => {   
         //Get data in localstorage
-       setData(JSON.parse(localStorage.getItem("data")))
+        localStorage.setItem('p', true)
+        if(localStorage.getItem('p') == true){
+            console.log(data)
+            setData(JSON.parse(localStorage.getItem("data")))
+        }
+
+
     }, [])
 
     useEffect(() => {
@@ -33,6 +39,7 @@ const BarUtil = () => {
     const handleInsert = (e) => {
         e.preventDefault()
         setData(data => [...data, { description: description, type: type, category: category, value: value }])
+        
     }
 
     return (
