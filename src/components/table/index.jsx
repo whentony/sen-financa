@@ -107,17 +107,16 @@ const Table = () => {
                 contentLabel="Example Modal"
             >
                 <h2 className='text-center'>Editar</h2>
-                <button className='text-center' onClick={closeModal}>Fechar</button>
                 <form onSubmit={(e) => handleEdit(e)}>
-                <div className={styles.boxOutros}>
+                <div className='boxOutros'>
                     <span className={styles.title}> Descrição </span>
                     <input type='text' value={description} onChange={(e) => setDescription(e.target.value)} required />
                 </div>
-                <div className={styles.boxOutros}>
+                <div className='boxOutros'>
                     <span className={styles.title}> Valor </span>
                     <input type='text' value={value} onChange={(e) => setValue(e.target.value)} placeholder='00,00' required />
                 </div>
-                <div className={styles.boxOutros}>
+                <div className='boxOutros'>
                     <button type='submit'>Enviar</button>
                 </div>
                 </form>

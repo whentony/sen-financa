@@ -47,18 +47,18 @@ const BarUtil = () => {
         <form onSubmit={(e) => handleInsert(e)}>
             <div className={styles.containerBarUtil}>
 
-                <div className={styles.boxOutros}>
+                <div className='boxOutros'>
                     <span className={styles.title}> Descrição </span>
                     <input type='text' onChange={(e) => setDescription(e.target.value)} required />
                 </div>
-                <div className={styles.boxOutros}>
+                <div className='boxOutros'>
                     <span className={styles.title}> Tipo </span>
                     <select onChange={(e) => setType(e.target.value)}>
                         <option value='e'>Entrada</option>
                         <option value='s'>Saida</option>
                     </select>
                 </div>
-                <div className={styles.boxOutros}>
+                <div className='boxOutros'>
                     <span className={styles.title}> Categoria </span>
                     <select onChange={(e) => setCategory(e.target.value)}>
                         <option value='Alimentação'>Alimentação</option>
@@ -70,15 +70,15 @@ const BarUtil = () => {
 
                     </select>
                 </div>
-                <div className={styles.boxOutros}>
+                <div className='boxOutros'>
                     <span className={styles.title}> Valor </span>
                     <input type='number' onChange={(e) => setValue(e.target.value)} placeholder='00,00' required />
                 </div>
-                <div className={styles.boxOutros}>
+                <div className='boxOutros'>
                     <button type='submit'>Enviar</button>
                 </div>
 
-                <div className={total >= 0 ? 'entrada' + ' ' + styles.boxSaldo : 'saida' + ' ' + styles.boxSaldo}>
+                <div className={total >= 0 ? 'entrada boxSaldo'  : 'saida boxSaldo' }>
                     <span className={styles.title}>Saldo</span> R$ {total.toFixed(2)}
                 </div>
             </div>

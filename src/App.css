@@ -107,3 +107,15 @@ th{
 .text-center{
     text-align: center;
 }
+
+.boxOutros{
+    padding: 10px;
+    text-align: center;
+  }
+  .boxSaldo {
+  
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
