@@ -12,12 +12,13 @@ const BarUtil = () => {
 
     useEffect(() => {   
         //Get data in localstorage
-        localStorage.setItem('p', true)
-        if(localStorage.getItem('p') == true){
+     
+       
+        if(localStorage.getItem('p') == 'true'){
             console.log(data)
             setData(JSON.parse(localStorage.getItem("data")))
         }
-
+        localStorage.setItem('p', true)
 
     }, [])
 
