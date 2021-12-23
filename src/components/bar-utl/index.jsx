@@ -30,10 +30,16 @@ const BarUtil = () => {
                 if (data[i].type == 'e') {
                     aux = aux + parseFloat(data[i].value)
                 } else {
+                  
                     aux = aux - parseFloat(data[i].value)
                 }
             }
+           
             setTotal(aux)
+        }
+        console.log(data.length == 0)
+        if(data.length == 0){
+            setTotal(0)
         }
     }, [data]);
 
